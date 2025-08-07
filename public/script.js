@@ -1,6 +1,7 @@
 const scheduleElement = document.getElementById('schedule');
 const searchInput = document.getElementById('search');
 const speakerSearchInput = document.getElementById('speaker-search');
+const clearSearchButton = document.getElementById('clear-search');
 
 let talks = [];
 
@@ -46,8 +47,15 @@ const filterTalks = () => {
   renderSchedule(filteredTalks);
 };
 
+const clearSearch = () => {
+  searchInput.value = '';
+  speakerSearchInput.value = '';
+  renderSchedule(talks);
+};
+
 searchInput.addEventListener('input', filterTalks);
 speakerSearchInput.addEventListener('input', filterTalks);
+clearSearchButton.addEventListener('click', clearSearch);
 
 fetch('/api/talks')
   .then(response => response.json())
