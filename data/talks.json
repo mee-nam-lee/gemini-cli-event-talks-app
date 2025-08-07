@@ -1,0 +1,44 @@
+[
+  {
+    "title": "The Future of Artificial Intelligence",
+    "speakers": ["John Doe"],
+    "category": ["AI", "Machine Learning"],
+    "duration": 60,
+    "description": "A deep dive into the future of AI and its impact on society."
+  },
+  {
+    "title": "Building Scalable Web Applications",
+    "speakers": ["Jane Smith"],
+    "category": ["Web Development", "Scalability"],
+    "duration": 60,
+    "description": "Learn how to build web applications that can handle millions of users."
+  },
+  {
+    "title": "Cybersecurity in the Modern Age",
+    "speakers": ["Peter Jones", "Mary Williams"],
+    "category": ["Cybersecurity"],
+    "duration": 60,
+    "description": "An overview of the latest cybersecurity threats and how to protect against them."
+  },
+  {
+    "title": "The Rise of Quantum Computing",
+    "speakers": ["David Brown"],
+    "category": ["Quantum Computing", "Future Tech"],
+    "duration": 60,
+    "description": "Explore the exciting world of quantum computing and its potential applications."
+  },
+  {
+    "title": "Data Science for Social Good",
+    "speakers": ["Susan Garcia"],
+    "category": ["Data Science", "Social Impact"],
+    "duration": 60,
+    "description": "Using data science to address some of the world's most pressing social challenges."
+  },
+  {
+    "title": "The Ethics of AI",
+    "speakers": ["Michael Miller", "Sarah Wilson"],
+    "category": ["AI", "Ethics"],
+    "duration": 60,
+    "description": "A discussion on the ethical implications of artificial intelligence."
+  }
+]
