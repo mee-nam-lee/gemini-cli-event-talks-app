@@ -1,5 +1,6 @@
 const scheduleElement = document.getElementById('schedule');
 const searchInput = document.getElementById('search');
+const speakerSearchInput = document.getElementById('speaker-search');
 
 let talks = [];
 
@@ -35,14 +36,18 @@ const renderSchedule = (filteredTalks) => {
 };
 
 const filterTalks = () => {
-  const searchTerm = searchInput.value.toLowerCase();
+  const categorySearchTerm = searchInput.value.toLowerCase();
+  const speakerSearchTerm = speakerSearchInput.value.toLowerCase();
   const filteredTalks = talks.filter(talk => {
-    return talk.category.some(category => category.toLowerCase().includes(searchTerm));
+    const categoryMatch = talk.category.some(category => category.toLowerCase().includes(categorySearchTerm));
+    const speakerMatch = talk.speakers.some(speaker => speaker.toLowerCase().includes(speakerSearchTerm));
+    return categoryMatch || speakerMatch;
   });
   renderSchedule(filteredTalks);
 };
 
 searchInput.addEventListener('input', filterTalks);
+speakerSearchInput.addEventListener('input', filterTalks);
 
 fetch('/api/talks')
   .then(response => response.json())
